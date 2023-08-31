@@ -240,8 +240,8 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Container(
                 decoration: const BoxDecoration(
                     gradient: LinearGradient(colors: [
-                  Color.fromARGB(205, 20, 106, 132),
-                  Color.fromARGB(92, 30, 162, 120),
+                  Color.fromARGB(92, 106, 217, 182),
+                  Color.fromARGB(255, 89, 202, 192),
                 ])),
                 // color: const Color.fromARGB(255, 215, 211, 211),
                 child: Row(
@@ -257,7 +257,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                               height: 180,
                               width: 180,
-                              child: Row(
+                              child: const Row(
                                 children: [
                                   Expanded(
                                     child: Column(
