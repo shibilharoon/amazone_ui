@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
     
       title: "Amazon Clone UI",
       home: BottomBar(),
+      
       debugShowCheckedModeBanner: false,
     );
   }

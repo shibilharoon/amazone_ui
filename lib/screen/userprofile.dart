@@ -1,3 +1,5 @@
+import 'package:amazon/screen/youraccount.dart';
+import 'package:amazon/screen/youraccount.dart';
 import 'package:flutter/material.dart';
 
 class UserProfile extends StatelessWidget {
@@ -7,7 +9,8 @@ class UserProfile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(168, 102, 196, 176),
+        automaticallyImplyLeading: false,
+        backgroundColor: const Color.fromARGB(204, 153, 249, 228),
         title: Row(
           children: [
             Container(
@@ -63,6 +66,8 @@ class UserProfile extends StatelessWidget {
                       width: 180,
                     ),
                     Container(
+                      height: 50,
+                      width: 50,
                       decoration: BoxDecoration(
                           color: Colors.grey,
                           borderRadius: BorderRadius.circular(10),
@@ -116,19 +121,26 @@ class UserProfile extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Container(
-                    alignment: Alignment.center,
-                    width: 170,
-                    height: 55,
-                    //color: Colors.black,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(30),
-                        border: Border.all(color: Colors.grey, width: 2)),
-                    child: const Text(
-                      "Your Account",
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                  GestureDetector(
+                    onTap: () {
+                      // profile;
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => profile()));
+                    },
+                    child: Container(
+                      alignment: Alignment.center,
+                      width: 170,
+                      height: 55,
+                      //color: Colors.black,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(30),
+                          border: Border.all(color: Colors.grey, width: 2)),
+                      child: const Text(
+                        "Your Account",
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.w500),
+                      ),
                     ),
                   ),
                   Container(
@@ -387,7 +399,7 @@ class UserProfile extends StatelessWidget {
                 Text(" 1 viewed",
                     style: TextStyle(
                       color: Color.fromARGB(255, 83, 81, 81),
-                    ))
+                    )),
               ],
             ),
           ],

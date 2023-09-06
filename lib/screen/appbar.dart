@@ -1,8 +1,10 @@
+import 'package:amazon/screen/youraccount.dart';
 import 'package:flutter/material.dart';
 import './homescreen.dart';
 import 'cart.dart';
 import 'menu.dart';
 import 'userprofile.dart';
+import 'youraccount.dart';
 
 class BottomBar extends StatefulWidget {
   const BottomBar({super.key});
@@ -24,15 +26,63 @@ class _BottomBarState extends State<BottomBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // appBar: AppBar(
+      //   backgroundColor: const Color.fromARGB(204, 153, 249, 228),
+      //   title: Row(
+      //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      //     children: [
+      //       Expanded(
+      //         child: Container(
+      //           height: 42,
+      //           margin: const EdgeInsets.only(left: 15),
+      //           child: Material(
+      //             borderRadius: BorderRadius.circular(7),
+      //             child: TextFormField(
+      //               decoration: InputDecoration(
+      //                 prefixIcon: InkWell(
+      //                   onTap: () {},
+      //                   child: const Padding(
+      //                     padding: EdgeInsets.only(
+      //                       left: 6,
+      //                     ),
+      //                     child: Icon(
+      //                       Icons.search,
+      //                       color: Colors.black38,
+      //                       size: 23,
+      //                     ),
+      //                   ),
+      //                 ),
+      //                 suffixIcon: Icon(
+      //                   Icons.center_focus_strong_outlined,
+      //                   color: Colors.grey[20],
+      //                 ),
+      //                 filled: true,
+      //                 fillColor: Colors.white,
+      //                 contentPadding: const EdgeInsets.only(top: 10),
+      //                 border: const OutlineInputBorder(
+      //                   borderRadius: BorderRadius.all(
+      //                     Radius.circular(7),
+      //                   ),
+      //                   borderSide: BorderSide(
+      //                     color: Colors.black38,
+      //                     width: 1,
+      //                   ),
+      //                 ),
+      //                 hintText: 'Search Amazon.in',
+      //                 hintStyle: const TextStyle(
+      //                   fontWeight: FontWeight.w500,
+      //                   fontSize: 17,
+      //                 ),
+      //               ),
+      //             ),
+      //           ),
+      //         ),
+      //       ),
+      //     ],
+      //   ),
+      // ),
       body: _screens[_currentIndex],
       bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          border: Border(
-            top: BorderSide(
-              color: Colors.grey,
-            ),
-          ),
-        ),
         child: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           selectedItemColor: Color.fromARGB(255, 10, 99, 84),
