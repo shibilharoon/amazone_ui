@@ -500,7 +500,7 @@ class _CartState extends State<Cart> with SingleTickerProviderStateMixin {
                   ),
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 11,
                 ),
                 Container(
                   height: 800,
